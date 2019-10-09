@@ -14,8 +14,19 @@
   <title>Ryan Lindskog</title>
   <meta name="description" content="Ryan Lindskog is a creative problem solver and entrepreneur.">
   <style>
+    :root {
+      --bg-color: black;
+      --text-color: white;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-color: white;
+        --text-color: black;
+      }
+    }
     html,
     body {
+      background: var(--bg-color);
       padding: 0;
       margin: 0;
       height: 100%;
@@ -48,7 +59,7 @@
 
     #links {
       margin-top: 50px;
-      color: white;
+      color: var(--text-color);
       display: flex;
       flex-direction: row;
       justify-content: space-around;
@@ -61,72 +72,19 @@
     }
 
     .fade-in {
-      fill: white;
-      color: white;
+      fill: var(--text-color);
+      color: var(--text-color);
       animation: fade 2s linear forwards;
     }
 
     @keyframes fade {
       from {
-        /* stroke-dashoffset: 2000; */
         fill: transparent;
         color: transparent;
       }
       to {
-        fill: white;
-        color: white;
-        /* stroke-dashoffset: 0; */
-      }
-    }
-    @media (prefers-color-scheme: dark) {
-      html, body {
-        background: black;
-      }
-      #links {
-        color: white;
-      }
-      .fade-in {
-        fill: white;
-        color: white;
-        animation: fade 2s linear forwards;
-      }
-      @keyframes fade {
-        from {
-          /* stroke-dashoffset: 2000; */
-          fill: transparent;
-          color: transparent;
-        }
-        to {
-          fill: white;
-          color: white;
-          /* stroke-dashoffset: 0; */
-        }
-      }
-    }
-    @media (prefers-color-scheme: light) {
-      html, body {
-        color: white;
-        background-color: none;
-      }
-      #links {
-        color: black;
-      }
-      .fade-in {
-        fill: black;
-        color: black;
-        animation: fade 2s linear forwards;
-      }
-      @keyframes fade {
-        from {
-          /* stroke-dashoffset: 2000; */
-          fill: transparent;
-          color: transparent;
-        }
-        to {
-          fill: black;
-          color: black;
-          /* stroke-dashoffset: 0; */
-        }
+        fill: var(--text-color);
+        color: var(--text-color);
       }
     }
   </style>

@@ -1,4 +1,14 @@
 {
   "name": "rlindskog",
-  "alias": ["rlindskog", "ryanlindskog.com", "rlindskog.com"]
+  "alias": ["rlindskog", "ryanlindskog.com", "rlindskog.com"],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/twitter", "status": 301, "headers": { "Location": "https://twitter.com/r_lindskog" } },
+    { "src": "/twitch", "status": 301, "headers": { "Location": "https://twitch.tv/r_lindskog" } },
+    { "src": "/linkedin", "status": 301, "headers": { "Location": "https://linkedin.com/in/rlindskog" } },
+    { "src": "/facebook", "status": 301, "headers": { "Location": "https://facebook.com/rlindskog" } },
+    { "src": "/instagram", "status": 301, "headers": { "Location": "https://instagram.com/rlindskog" } },
+    { "src": "/reddit", "status": 301, "headers": { "Location": "https://reddit.com/u/rlindskog" } },
+    { "src": "/quora", "status": 301, "headers": { "Location": "https://quora.com/profile/Rlindskog" } }
+  ]
 }
